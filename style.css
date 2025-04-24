@@ -47,8 +47,8 @@ body, html {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 4px solid white;
   object-fit: cover;
+  border: 4px solid white;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   margin-bottom: 40px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -56,7 +56,7 @@ body, html {
 
 .profile-pic:hover {
   transform: scale(1.1) rotate(3deg);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .nav-boxes {
