@@ -1,48 +1,79 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  header {
-    background-color: #f02424;
-    color: #fff;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  nav {
-    background-color: #444;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 40px 20px;
-  }
-  
-  .project, .experience {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.bubbles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.bubble {
+  padding: 30px 40px;
+  background: #4e73df;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.bubble:hover {
+  background: #2e59d9;
+  transform: scale(1.1);
+}
+
+/* Animations */
+.animate-slide {
+  animation: slideIn 1s ease-out;
+}
+
+.animate-fade {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-bounce {
+  animation: bounceIn 1s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
