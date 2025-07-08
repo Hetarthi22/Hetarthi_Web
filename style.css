@@ -113,3 +113,10 @@ html, body {
   max-width: 100%;
   border-radius: 10px;
 }
+
+.center-content {
+  height: auto !important;       /* let it grow with its content */
+  min-height: 100vh;             /* still fill the screen on short pages */
+  justify-content: flex-start;   /* stack from the top, not center */
+  padding: 40px 20px;            /* a little breathing room */
+}
