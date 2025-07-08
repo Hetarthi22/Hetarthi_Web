@@ -1,9 +1,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: auto;
+  height: auto; /* Let content define height */
   font-family: 'Segoe UI', sans-serif;
-  overflow-y: auto;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .background {
@@ -14,7 +14,7 @@ html, body {
   background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
-  z-index: -1;
+  z-index: -1; /* Keep it behind all content */
 }
 
 @keyframes gradientShift {
@@ -28,9 +28,10 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* 👈 Changed from height to min-height */
   color: white;
   text-align: center;
+  padding: 20px; /* Add some breathing room */
 }
 
 .name {
@@ -82,13 +83,14 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
+
 .project-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
   max-width: 800px;
   width: 90%;
-  margin: 0 auto;
+  margin: 40px auto; /* Added margin for spacing */
 }
 
 .project-card {
@@ -104,4 +106,10 @@ html, body {
 .contact-box p a {
   color: #fff;
   text-decoration: underline;
+}
+
+/* Responsive YouTube video embed */
+.project-card iframe {
+  max-width: 100%;
+  border-radius: 10px;
 }
